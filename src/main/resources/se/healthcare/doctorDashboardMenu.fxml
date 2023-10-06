@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="se.healthcare.DoctorDashboardMenuController">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="367.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Available Slots  |">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleSlotMenu" text="Add Slots" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Appointments  |">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAppointsMenu" text="View Appointments" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Logout ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

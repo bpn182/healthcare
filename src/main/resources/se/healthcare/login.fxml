@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.healthcare.LoginController">
+    <children>
+        <Pane layoutX="207.0" layoutY="74.0" prefHeight="292.0" prefWidth="597.0">
+            <children>
+                <Text layoutX="234.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HealthLink Login">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="282.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+                <Text layoutX="133.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+                <PasswordField fx:id="password" layoutX="225.0" layoutY="171.0" />
+                <TextField fx:id="username" layoutX="225.0" layoutY="127.0" />
+                <Button fx:id="handleLoginButtonAction" layoutX="269.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleLogin" text="LOGIN" />
+            <Text layoutX="133.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            </children>
+        </Pane>  
+    </children>
+</AnchorPane>

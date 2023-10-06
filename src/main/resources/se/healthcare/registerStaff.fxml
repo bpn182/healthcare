@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.healthcare.RegisterStaffController">
+    <children>
+        <fx:include source="adminDashboardMenu.fxml"/>
+
+        <Pane layoutX="213.0" layoutY="40.0" prefHeight="344.0" prefWidth="573.0">
+            <Text layoutX="239.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Staff" />
+            <Text layoutX="138.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:" />
+            <TextField fx:id="fullName" layoutX="231.0" layoutY="62.0" />
+            <Text layoutX="138.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+            <TextField fx:id="username" layoutX="231.0" layoutY="99.0" />
+            <Text layoutX="138.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <TextField fx:id="password" layoutX="231.0" layoutY="134.0" />
+            <Text layoutX="136.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
+            <TextField fx:id="phone" layoutX="231.0" layoutY="170.0" />
+            <Text layoutX="137.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:" />
+            <Button layoutX="280.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleRegisterStaffButton" text="Register" />
+            <Text layoutX="137.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Licence No:" />
+            <TextField fx:id="licence" layoutX="231.0" layoutY="240.0" />
+            <Text layoutX="139.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department:" />
+            <ComboBox fx:id="role" layoutX="231.0" layoutY="205.0" prefHeight="24.0" prefWidth="170.0" />
+            <ComboBox fx:id="department" layoutX="231.0" layoutY="273.0" prefHeight="24.0" prefWidth="170.0" />
+        </Pane>
+        <TableView fx:id="staffTableView" layoutX="143.0" layoutY="396.0" prefHeight="200.0" prefWidth="725.0">
+            <columns>
+                <TableColumn fx:id="fullNameColumn" prefWidth="120.83" text="Full Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="fullName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="usernameColumn" prefWidth="120.83" text="Username">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="username" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="phoneColumn" prefWidth="120.83" text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="licenceColumn" prefWidth="120.83" text="Licence No">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="licence" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="roleColumn" prefWidth="120.83" text="Role">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="role" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="departmentColumn" prefWidth="120.83" text="Department">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="department" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+
+
+    </children>
+</AnchorPane>

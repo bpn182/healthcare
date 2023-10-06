@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.healthcare.EhrRecordController">
+    <children>
+        <fx:include source="staffDashboardMenu.fxml" />
+
+        <Pane layoutX="207.0" layoutY="47.0" prefHeight="304.0" prefWidth="597.0">
+            <children>
+                <Text layoutX="129.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Medications:" />
+                <TextField fx:id="currentMedications" layoutX="287.0" layoutY="57.0" />
+                <Text layoutX="129.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition:" />
+                <TextField fx:id="conditions" layoutX="287.0" layoutY="91.0" />
+                <Text layoutX="129.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allergens:" />
+                <TextField fx:id="allergens" layoutX="287.0" layoutY="126.0" />
+                <Text layoutX="129.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note:" />
+                <TextArea fx:id="note" layoutX="287.0" layoutY="160.0" prefHeight="82.0" prefWidth="170.0" />
+                <Button layoutX="287.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSubmitBtn" text="Save" />
+            <Text layoutX="129.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient:" />
+            <Text fx:id="patientName" layoutX="284.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name" />
+            </children>
+        </Pane>
+      
+        <TableView fx:id="ehrTableView" layoutX="150.0" layoutY="362.0" prefHeight="371.0" prefWidth="737.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="362.0">
+            <columns>
+                <TableColumn fx:id="currentMedicationColumn" prefWidth="150.0" text="Current Medication">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="currentMedications" />
+                    </cellValueFactory>
+                </TableColumn>
+            
+                <TableColumn fx:id="conditionColumn" prefWidth="100.0" text="DOB">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="condition" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="allergensColumn" prefWidth="100.0" text="Allergens">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="allergens" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="noteColumn" prefWidth="100.0" text="Note">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="note" />
+                    </cellValueFactory>
+                </TableColumn>
+
+
+            </columns>
+        </TableView>
+          <Text layoutX="411.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electronic Health Record" />
+    </children>
+</AnchorPane>

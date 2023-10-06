@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.healthcare.BillingInfoController">
+    <fx:include source="staffDashboardMenu.fxml" />
+   
+    <Text layoutX="422.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Billing Information">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Text>
+   
+    <!-- Doctor Name -->
+    <Text layoutX="343.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Name:" />
+    <Text fx:id="doctor" layoutX="451.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="doctor" />
+    
+    <!-- Patient Name -->
+    <Text layoutX="343.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name:" />
+    <Text fx:id="patientFullName" layoutX="451.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="patient" />
+
+    <!-- Appointment Date -->
+    <Text layoutX="343.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+    <Text fx:id="appointmentDate" layoutX="451.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date" />
+    
+    <!-- Service Name -->
+    <Text layoutX="343.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service Name:" />
+    <Text fx:id="serviceName" layoutX="451.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="service" />
+
+    <!-- Cost -->
+    <Text layoutX="343.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" />
+    <Text fx:id="serviceDepartment" layoutX="451.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="department" />
+    
+    <!-- Service Duration -->
+    <Text layoutX="343.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration:" />
+    <Text fx:id="serviceDuration" layoutX="451.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="duration" />
+
+    <!-- Service Department -->
+    <Text layoutX="343.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost" />
+    <Text fx:id="serviceCost" layoutX="451.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cost" />
+    
+</AnchorPane>

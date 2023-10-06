@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="se.healthcare.DoctorAppointmentsController">
+    <fx:include source="doctorDashboardMenu.fxml"/>
+          
+    <TableView fx:id="appointmentTable" layoutX="80.0" layoutY="175.0" prefHeight="523.0" prefWidth="837.0">
+        <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="date" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="hourColumn" prefWidth="101.0" text="Hour">
+                <cellValueFactory>
+                    <PropertyValueFactory property="hour" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="doctorColumn" prefWidth="100.0" text="Doctor">
+                <cellValueFactory>
+                    <PropertyValueFactory property="doctor" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="patientColumn" prefWidth="100.0" text="Patient">
+                <cellValueFactory>
+                    <PropertyValueFactory property="patient" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="serviceColumn" prefWidth="112.0" text="Service">
+                <cellValueFactory>
+                    <PropertyValueFactory property="service" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="costColumn" prefWidth="168.0" text="Cost">
+                <cellValueFactory>
+                    <PropertyValueFactory property="cost" />
+                </cellValueFactory>
+            </TableColumn>
+
+
+
+            <TableColumn fx:id="noteColumn" prefWidth="157.0" text="Note">
+                <cellValueFactory>
+                    <PropertyValueFactory property="note" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Text layoutX="430.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Appointments">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Text>
+</AnchorPane>
