@@ -1,5 +1,6 @@
 package database;
 
+import DAO.StaffDAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,6 +26,7 @@ public class DatabaseConnection {
                     // If the database doesn't exist, create it along with tables
                     createDatabaseAndTables();
                     connection = DriverManager.getConnection(DB_URL + DB_NAME, DB_USER, DB_PASSWORD);
+                    StaffDAO sdao = new StaffDAO(connection);
                     sdao.createDefaultAdmin();
                     
                 } else {
